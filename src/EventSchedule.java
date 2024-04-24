@@ -14,7 +14,7 @@ public class EventSchedule {
 	public static void main(String[] args) throws Exception {
 
 		String line;
-		BufferedReader br = new BufferedReader(new FileReader("src/sessions.csv"));
+		BufferedReader br = new BufferedReader(new FileReader("sessions.csv"));
 		List<Slot<Session, Timeframe>> slots = new ArrayList<>();
 		LocalDateTime start = LocalDateTime.now();
 
