@@ -1,3 +1,3 @@
 #!/bin/bash
-
-native-image --enable-preview -cp ./target EventSchedule -o ./target/app
+set -x
+native-image --enable-preview -cp ./target -o ./target/nativeeventschedule EventSchedule
