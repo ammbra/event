@@ -25,7 +25,7 @@ record Workshop(String title, List<String> steps, int duration, Speaker speaker,
 			ConsoleHandler handler = new ConsoleHandler();
 			handler.setFormatter(new SimpleFormatter());
 			logger.addHandler(handler);
-			logger.setLevel(Level.INFO);
+			logger.setLevel(Level.OFF);
 			logger.log(Level.INFO, "first = " + first.state());
 			logger.log(Level.INFO,"first = " + first.state());
 			logger.log(Level.INFO,"second = " + second.state());
