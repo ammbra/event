@@ -26,7 +26,6 @@ record Workshop(String title, List<String> steps, int duration, Speaker speaker,
 			handler.setFormatter(new SimpleFormatter());
 			logger.addHandler(handler);
 			logger.setLevel(Level.OFF);
-			logger.log(Level.INFO, "first = " + first.state());
 			logger.log(Level.INFO,"first = " + first.state());
 			logger.log(Level.INFO,"second = " + second.state());
 			logger.log(Level.INFO,"third = " + third.state());
@@ -41,40 +40,40 @@ record Workshop(String title, List<String> steps, int duration, Speaker speaker,
 	}
 
 	public static Workshop readTags1(String title, List<String> steps, int duration, Speaker speaker) {
-		int amount = random.nextInt(0, 7);
+		int level = random.nextInt(0, 7);
 		try {
-			Thread.sleep(amount);
-			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, amount));
+			Thread.sleep(level);
+			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, level));
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
 	public static Workshop readTags2(String title, List<String> steps, int duration, Speaker speaker) {
-		int amount = random.nextInt(0, 4);
+		int level = random.nextInt(0, 4);
 		try {
-			Thread.sleep(amount);
-			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, amount));
+			Thread.sleep(level);
+			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, level));
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
 	public static Workshop readTags3(String title, List<String> steps, int duration, Speaker speaker) {
-		int amount = random.nextInt(0, 6);
+		int level = random.nextInt(0, 6);
 		try {
-			Thread.sleep(amount);
-			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, amount));
+			Thread.sleep(level);
+			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, level));
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
 	public static Workshop readTags4(String title, List<String> steps, int duration, Speaker speaker) {
-		int amount = random.nextInt(0, 7);
+		int level = random.nextInt(0, 7);
 		try {
-			Thread.sleep(amount);
-			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, amount));
+			Thread.sleep(level);
+			return new Workshop(title, steps, duration, speaker, EventSchedule.TAGS.subList(0, level));
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}

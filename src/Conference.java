@@ -8,11 +8,11 @@ record Conference(String title, int duration, Speaker speaker, double popularity
 	private static final Random random = new Random();
 
 	public Conference {
-		if (!EventSchedule.VALID_REQUEST.isBound()) {
-			throw new IllegalStateException("The request state is not bound");
-		} else if (!EventSchedule.VALID_REQUEST.get()
-				.equals("Eligible")) {
-			throw new IllegalStateException("Request state is " + EventSchedule.VALID_REQUEST.get());
+		if (!EventSchedule.VALID_SESSION.isBound()) {
+			throw new IllegalStateException("The session state is not submitted");
+		} else if (!EventSchedule.VALID_SESSION.get()
+				.equals("Submitted")) {
+			throw new IllegalStateException("Submission state is " + EventSchedule.VALID_SESSION.get());
 		}
 	}
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class EventSchedule {
 
-	public static ScopedValue<String> VALID_REQUEST = ScopedValue.newInstance();
+	public static ScopedValue<String> VALID_SESSION = ScopedValue.newInstance();
 	public static List<String> TAGS = Arrays.asList("Java", "JVM", "Cloud", "Tools", "JDK", "Practices", "Performance");
 
 	public static void main(String[] args) throws Exception {
@@ -37,7 +37,7 @@ public class EventSchedule {
 
 				case "conference" -> {
 					Speaker speaker = new Speaker(values[3], values[4], values[5]);
-					Conference conference = ScopedValue.where(VALID_REQUEST, "Eligible")
+					Conference conference = ScopedValue.where(VALID_SESSION, "Submitted")
 							.call(() -> Conference.findPopularity(values[1], Integer.parseInt(values[2]), speaker));
 					slots.add(new Slot<>(conference, new Timeframe(start, start.plusMinutes(conference.duration()))));
 					start = start.plusMinutes(conference.duration());
