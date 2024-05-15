@@ -7,9 +7,6 @@ import java.util.*;
 
 public class EventSchedule {
 
-	public static ScopedValue<String> VALID_REQUEST = ScopedValue.newInstance();
-	public static List<String> TAGS = Arrays.asList("Java", "JVM", "Cloud", "Tools", "JDK", "Practices", "Performance");
-
 	void main(String[] args) throws Exception {
 
 		String line;
