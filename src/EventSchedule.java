@@ -12,9 +12,6 @@ import java.util.*;
 //TODO a workshop has a title, steps to execute, a duration and a speaker
 public class EventSchedule {
 
-	public static ScopedValue<String> VALID_REQUEST = ScopedValue.newInstance();
-	public static List<String> TAGS = Arrays.asList("Java", "JVM", "Cloud", "Tools", "JDK", "Practices", "Performance");
-
 	public static void main(String[] args) throws Exception {
 
 		String line;
