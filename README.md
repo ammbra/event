@@ -20,3 +20,22 @@ To run this application you need minimum `JDK 22` installed on your machine and 
 java --enable-preview --source 22 src/EventSchedule.java
 ```
 
+## Run with GraalVM Native Image
+
+Package and build:
+```shell
+./package.sh
+./native-compile.sh
+```
+Run as a native image:
+
+```shell
+./target/nativeeventschedule
+```
+
+Compare execution time, CPU and memory usage:
+
+```shell
+./time-jvm.sh
+./time-native.sh
+```
